@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jogo da Forca</title>
+    <meta name="description" content="Jogo da forca - Jogue com as palavras já existentes ou adicione novas palavras!
+    Divirta-se!">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1>
+                Jogo da Forca
+            </h1>
+        </a>
+    </header>
+
+    <main>
+        <section class="botoes-iniciar">
+            <button class="btn-iniciar">Iniciar jogo</button>
+            <button class="btn-adicionar">Adicionar nova palavra</button>
+        </section>
+        
+        <section class="tabuleiro invisivel">
+            <canvas id="tabuleiro" width="1200" height="650"></canvas>
+            <div class="botoes-teclado">
+                <button class="ativar-teclado" title="Mostrar teclado virtual">&#9000; &#9660;</button>
+                <button class="desativar-teclado invisivel" title="Esconder teclado virtual">&#9000; &#9650;</button>
+            </div>
+            <div class="teclado invisivel">
+                <button class="letras-teclado letra-q">Q</button>
+                <button class="letras-teclado letra-w">W</button>
+                <button class="letras-teclado letra-e">E</button>
+                <button class="letras-teclado letra-r">R</button>
+                <button class="letras-teclado letra-t">T</button>
+                <button class="letras-teclado letra-y">Y</button>
+                <button class="letras-teclado letra-u">U</button>
+                <button class="letras-teclado letra-i">I</button>
+                <button class="letras-teclado letra-o">O</button>
+                <button class="letras-teclado letra-p">P</button>
+                <br>
+                <button class="letras-teclado letra-a">A</button>
+                <button class="letras-teclado letra-s">S</button>
+                <button class="letras-teclado letra-d">D</button>
+                <button class="letras-teclado letra-f">F</button>
+                <button class="letras-teclado letra-g">G</button>
+                <button class="letras-teclado letra-h">H</button>
+                <button class="letras-teclado letra-j">J</button>
+                <button class="letras-teclado letra-k">K</button>
+                <button class="letras-teclado letra-l">L</button>
+                <br>
+                <button class="letras-teclado letra-z">Z</button>
+                <button class="letras-teclado letra-x">X</button>
+                <button class="letras-teclado letra-c">C</button>
+                <button class="letras-teclado letra-v">V</button>
+                <button class="letras-teclado letra-b">B</button>
+                <button class="letras-teclado letra-n">N</button>
+                <button class="letras-teclado letra-m">M</button>
+            </div>
+            <input type="text" class="entrada">
+            <button class="btn-novo-jogo">Novo jogo</button>
+            <button class="btn-desistir">Desistir</button>
+        </section>
+
+        <section class="adicionar-palavra invisivel">
+            <input type="text" class="add-palavra" placeholder="Digite aqui sua palavra...">
+
+            <div class="info">
+                <ul class="mensagens-erro"></ul>
+            </div>
+
+            <div class="botoes-adicionar">
+                <button class="btn-salvar">Salvar</button>
+                <button class="btn-voltar">Voltar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="redes">
+            <p>Minhas redes: </p>
+        
+        <a href="https://github.com/xLucaspx" title="Gaby | GitHub" target="_blank">            
+            <img src="img/logo-github.png" alt="Logo do GitHub em formato circular."
+            width="45" height="45" id="github">
+            GitHub
+        </a>
+
+        <a href="https://www.instagram.com/gabriiely.m?igsh=Nm05NzcyM3doZTd0&utm_source=qr" title="Gaby | Instagram" target="_blank">
+            <img src="img/logo-instagram.png" alt="Logo do Instagram"
+            width="45" height="45" id="instagram">
+            Instagram
+        </a>
+        </div>
+        
+        
+    </footer>
+    <script src="js/valida.js"></script>
+    <script src="js/palavras.js"></script>
+    <script src="js/forca.js"></script>
+    <script src="js/tracos.js"></script>
+    <script src="js/teclado.js"></script>
+    <script src="js/jogo.js"></script>
+</body>
+</html>
